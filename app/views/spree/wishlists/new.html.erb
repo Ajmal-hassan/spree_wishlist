@@ -1,6 +1,14 @@
-<h1><%= Spree.t(:creating_wishlist) %></h1>
-<%= form_for @wishlist do |f| %>
-  <p><%= f.label :name, Spree.t(:name) %>:&nbsp;<%= f.text_field :name %></p>
-  <p><%= f.check_box :is_private %>&nbsp;<%= f.label :is_private, Spree.t(:is_private) %></p>
-  <%= f.submit Spree.t(:create) %>
-<% end -%>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-4 mb-5">
+      <h1 class="mt-5 mb-4"><%= Spree.t(:creating_wishlist) %></h1>
+      <%= form_for @wishlist do |f| %>
+        <p><%= f.label :name, Spree.t(:name) %>:&nbsp;<%= f.text_field :name, class: 'form-control' %></p>
+        <p><%= f.check_box :is_private %>&nbsp;<%= f.label :is_private, Spree.t(:is_private) %></p>
+        <%= f.submit Spree.t(:create), class: 'btn btn-primary' %>
+      <% end -%>
+    </div>
+  </div>
+</div>
+
+<i class="fa fa-home"></i>
